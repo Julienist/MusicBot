@@ -20,6 +20,18 @@ This can sometimes happen on Windows. Make sure:
 * **Double-Click**, don't use 'Open With'
 * **Use Command Prompt or Powershell** in the folder with the jar and use `java -jar JMusicBot-VERSION_HERE.jar` (replacing the version correctly)
 
+## Stopping JMusicBot as a process on Linux
+In case of testing if your bot is working, but fails to work on Discord by using commands (see next paragraph).
+You may want to stop JMusicBot, to reload your edited config.txt for example.
+In case you ran the following command to launch the bot:
+`java -Dnogui=true -jar JMusicBot-0.4.1.jar`
+You can use the following command to search the process thats running JMusicBot on your linux system.
+`pgrep -f JMusicBot`
+a 4-digit number will roll out, this is the process ID.
+`kill <process-ID-Number>`
+will stop the bot from working.
+*'<process-ID-Number>' is to be replaced with the given 4-digit number.
+
 ## Problems using commands
 !!! warning "The bot doesn't respond to commands!"
 * **Check the bot's prefix** - Look in your config file to see what you set the prefix to. The default prefix is a ping of the bot (ex: `@yourbot'sname ping` would run the ping command with the default prefix).
